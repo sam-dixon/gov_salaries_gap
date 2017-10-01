@@ -11792,7 +11792,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>university-of-california-2016.csv</code> contains the 2016 salaries and names of all University of California employees, as reported by <a href="http://transparentcalifornia.com/salaries/university-of-california/">http://transparentcalifornia.com/salaries/university-of-california/</a></p>
+<h1 id="The-Data-Set">The Data Set<a class="anchor-link" href="#The-Data-Set">&#182;</a></h1><p><code>university-of-california-2016.csv</code> contains the 2016 salaries and names of all University of California employees, as reported by <a href="http://transparentcalifornia.com/salaries/university-of-california/">Transparent California</a></p>
 
 </div>
 </div>
@@ -11833,7 +11833,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We match first names to probable genders using a lookup table based on US Census records.</p>
+<p>We match first names to probable genders using a lookup table based on US Census records. We found the lookup table <a href="raw.github.com/Bemmu/gender-from-name/master/gender.py">here</a></p>
 
 </div>
 </div>
@@ -11858,14 +11858,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's look at the aggregate statistics throughout the whole UC system.</p>
+<h1 id="All-UC-Employees">All UC Employees<a class="anchor-link" href="#All-UC-Employees">&#182;</a></h1><p>Let's look at the aggregate statistics throughout the whole UC system.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;male&#39;</span><span class="p">][</span><span class="s1">&#39;Total Pay &amp; Benefits&#39;</span><span class="p">],</span>
@@ -11876,7 +11876,7 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Total Pay and Benefits per year ($)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# employees&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# employees&#39;</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -11886,19 +11886,6 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[47]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x123b00400&gt;</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -12216,9 +12203,17 @@ SUVORK5CYII=
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Professors-only">Professors only<a class="anchor-link" href="#Professors-only">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">profs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Job Title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;PROF&#39;</span><span class="p">)]</span>
@@ -12231,7 +12226,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="n">profs</span><span class="p">[</span><span class="n">profs</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;male&#39;</span><span class="p">][</span><span class="s1">&#39;Total Pay &amp; Benefits&#39;</span><span class="p">],</span>
@@ -12242,7 +12237,7 @@ SUVORK5CYII=
 <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Total Pay and Benefits per year ($)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# employees&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;# employees&#39;</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -12252,19 +12247,6 @@ SUVORK5CYII=
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[49]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x1227bdda0&gt;</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -12561,14 +12543,14 @@ MzMzM7MO4IW7mZmZmVkH8MLdzMzMzKwDeOFuZmZmZtYBbgFfGNRpUpteuAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Looking only at professors, we still see a similar story. Men are overrepresented in higher paying professorships. What's going on here? Let's break it down by job title.</p>
+<h1 id="Control-for-job-title">Control for job title<a class="anchor-link" href="#Control-for-job-title">&#182;</a></h1><p>Looking only at professors, we still see a similar story. Men are overrepresented in higher paying professorships. What's going on here? Let's break it down by job title.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">aggregate_salaries</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">control</span><span class="p">,</span> <span class="n">gender_col_name</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span>
@@ -12603,7 +12585,7 @@ MzMzM7MO4IW7mZmZmVkH8MLdzMzMzKwDeOFuZmZmZtYBbgFfGNRpUpteuAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">gender_gap_vis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">control</span><span class="p">,</span> <span class="n">gender_col_name</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span>
@@ -12638,7 +12620,7 @@ MzMzM7MO4IW7mZmZmVkH8MLdzMzMzKwDeOFuZmZmZtYBbgFfGNRpUpteuAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gender_gap_vis</span><span class="p">(</span><span class="n">profs</span><span class="p">,</span> <span class="s1">&#39;Job Title&#39;</span><span class="p">,</span> <span class="n">count_cut</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -14348,6 +14330,14 @@ REREZyWxERERERERERGd9X+/VU24Zb/0gAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Control-for-department">Control for department<a class="anchor-link" href="#Control-for-department">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>It would also be interesting to see how the department the professors teach in contribute to the size of the gap. Unfortunately, the department is not included in the Transparent California data set. However, we scraped Rate My Professors to find the names, campuses, and departments of many UC professors. Let's take a look at this data too.</p>
 
 </div>
@@ -14355,7 +14345,7 @@ REREZyWxERERERERERGd9X+/VU24Zb/0gAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dept_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;prof_data_from_rmp.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
@@ -14371,7 +14361,7 @@ REREZyWxERERERERERGd9X+/VU24Zb/0gAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gender_gap_vis</span><span class="p">(</span><span class="n">profs</span><span class="p">,</span> <span class="s1">&#39;department&#39;</span><span class="p">)</span>
@@ -16007,6 +15997,14 @@ DxLVReyvmtLxAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Compare-UC-campuses">Compare UC campuses<a class="anchor-link" href="#Compare-UC-campuses">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>How do the different campuses compare? Let's see...</p>
 
 </div>
@@ -16651,19 +16649,6 @@ loUNSZIkSZLUWhY2JEmSJElSa/1/bleVu8sK4t0AAAAASUVORK5CYII=
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
